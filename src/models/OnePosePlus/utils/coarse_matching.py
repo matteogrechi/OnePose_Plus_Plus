@@ -48,8 +48,8 @@ def build_feat_normalizer(method, **kwargs):
         return lambda feat: feat / feat.shape[-1] ** 0.5
     elif method == "none" or method is None:
         return lambda feat: feat
-    elif method == "temparature":
-        return lambda feat: feat / kwargs["temparature"]
+    elif method == "temperature":
+        return lambda feat: feat / kwargs["temperature"]
     else:
         raise ValueError
 
